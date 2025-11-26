@@ -7,8 +7,8 @@ on:
         - dev   
   pull_request:
     branches: [main, dev]
-  schedule:
-    - cron: "*/1 * * * *"  
+#   schedule:
+#     - cron: "*/1 * * * *"  
 
 jobs:
 
@@ -32,7 +32,8 @@ jobs:
     deploy_job:
         runs-on: macos-latest
         steps:
-            - run: echo hello world
+            - name: display hello from mac
+              run: echo hello from mac
 
 
 
